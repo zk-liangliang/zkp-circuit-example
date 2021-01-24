@@ -1,0 +1,11 @@
+[package]
+name = "arkworks"
+version = "0.1.0"
+authors = ["zk616153275 <geniusreturndevour@foxmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#ark-ff = { git = "https://github.com/arkworks-rs/algebra", default-features = false }
+ark-groth16 = { git = "https://github.com/arkworks-rs/groth16" }

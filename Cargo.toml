@@ -1,0 +1,41 @@
+[package]
+authors = ["Jay Graber <graber.jay@gmail.com>"]
+description = "examples for bellman zk-SNARK library"
+license = "MIT/Apache-2.0"
+name = "bellman-tutorial"
+version = "0.1.0"
+
+[dependencies]
+rand = "0.7"
+bit-vec = "0.4.4"
+num-traits = "0.2.6"
+num-bigint = "0.2.2"
+sha2 = "0.8"
+
+bn = "0.4.3"
+pairing = "0.16"
+bellman = "0.6.0"
+group = "0.6.0"
+curve = { path = "curve", version = "0.1.0"}
+
+[dependencies.rand_core]
+version = "0.5"
+
+[dependencies.ff]
+version = "0.6.0"
+
+[workspace]
+members = [
+    "curve",
+    "verifier",
+    "bellman_ce_circuit",
+    "confident_transaction"
+]
+exclude = ["arkworks"]
+
+[profile.test]
+opt-level = 3
+lto = "thin"
+incremental = true
+debug-assertions = true
+debug = true

@@ -1,0 +1,18 @@
+[package]
+name = "bellman_ce_circuit"
+version = "0.1.0"
+authors = ["zk616153275 <geniusreturndevour@foxmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bellman_ce = { version = "0.3.0", default-features = false }
+sapling_crypto_ce = { package = "sapling-crypto_ce", git = "https://github.com/matter-labs/sapling-crypto", branch = "master" }
+rust-crypto = "0.2.36"
+pairing_ce = "0.24.2"
+curve = { path = "../curve", version = "0.1.0"}
+
+
+[dependencies.rand]
+version = "0.4"
